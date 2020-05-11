@@ -67,4 +67,4 @@ export default decorate(tomato).with(
 **Note:** The order is _not_ when using `decorate(obj).with(...decorators)`
 
 ## License
-Public Domain
+MIT
