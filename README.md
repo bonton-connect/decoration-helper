@@ -9,7 +9,7 @@ This is a absolutely tiny library to help decorate functions or classes in the u
 
 If you're here, you already know.
 
-```bash
+```
 yarn add decoration-helper
 ```
 
@@ -17,7 +17,7 @@ yarn add decoration-helper
 
 To achieve this
 
-```javascript
+```js
 @inject('app', 'auth')
 @withRouter
 @observer
@@ -34,7 +34,7 @@ export default inject('app', 'auth')(
 
 you write this:
 
-```javascript
+```js
 import { apply } from 'decoration-helper';
 
 function tomato() {
@@ -50,7 +50,7 @@ export default apply(
 
 or alternatively this, if you prefer:
 
-```javascript
+```js
 import { decorate } from 'decoration-helper';
 
 function tomato() {
