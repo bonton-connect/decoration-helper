@@ -1,0 +1,9 @@
+{
+  "name": "decoration-helper",
+  "version": "1.0.0",
+  "description": "A tiny library to help decorate functions or classes in the ugly messy pre-standardized decorator spec era.",
+  "main": "src/index.js",
+  "repository": "https://github.com/bonton-connect/decoration-helper",
+  "author": "Omran Jamal <omran@bonton.app>",
+  "license": "Public Domain"
+}
