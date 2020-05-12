@@ -1,6 +1,6 @@
 # Decoration Helper
 
-This is a absolutely tiny library to help decorate functions or classes in the ugly messy pre-standardized decorator spec era in Javascript.
+This is a absolutely tiny library to help decorate functions or classes in a prettier way in the ugly messy pre-standardized decorator spec era of Javascript.
 
 ![Example](https://i.imgur.com/S2NnIgR.png)
 
@@ -68,7 +68,7 @@ export default decorate(tomato).with(
 );
 ```
 
-**Note:** The order is _not_ when using `decorate(obj).with(...decorators)`
+**Note:** The order is _not_ reversed when using `decorate(obj).with(...decorators)`
 
 
 ## `pipe()` and `compose()`
