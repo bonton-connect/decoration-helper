@@ -15,7 +15,8 @@
   },
   "scripts": {
     "build": "npx babel src --out-dir dist",
-    "test": "npm run build && npx mocha"
+    "test": "npm run build && npx mocha",
+    "prepublish": "npm run test"
   },
   "readme": "README.md",
   "keywords": ["functional", "composition", "decorators", "decoration", "pipe", "compose", "functions"]
