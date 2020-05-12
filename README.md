@@ -4,6 +4,10 @@ This is a absolutely tiny library to help decorate functions or classes in the u
 
 ![Example](https://i.imgur.com/S2NnIgR.png)
 
+Features:
+- Natural composition with `decorate(...).with(fn)`
+- Decorator style composition with `apply(...).to(fn)`
+- Functional `pipe(...)(fn)` and `compose(...)(fn)` included.
 
 ## Installation
 
@@ -13,7 +17,7 @@ If you're here, you already know.
 yarn add decoration-helper
 ```
 
-## Usage Example
+## Usage
 
 To achieve this
 
@@ -65,6 +69,47 @@ export default decorate(tomato).with(
 ```
 
 **Note:** The order is _not_ when using `decorate(obj).with(...decorators)`
+
+
+## `pipe()` and `compose()`
+
+The proper functional approach would be to use `pipe()` and `compose()` as described by 
+[Eric Elliot](https://medium.com/@_ericelliott).
+This [post](https://medium.com/free-code-camp/pipe-and-compose-in-javascript-5b04004ac937) has
+more details about it.
+
+```js
+// Analogous to decorate(fn).with(...);
+
+import { pipe } from 'decoration-helper';
+
+function tomato() {
+    console.log("tomato");
+}
+
+export default pipe(
+    observer,
+    withRouter,
+    inject('app', 'auth')
+)(tomato);
+
+
+
+// Analogous to apply(...).to(fn);
+
+import { compose } from 'decoration-helper';
+
+function tomato() {
+    console.log("tomato");
+}
+
+export default compose(
+    inject('app', 'auth'),
+    withRouter,
+    observer  
+)(tomato);
+```
+
 
 ## License
 MIT
