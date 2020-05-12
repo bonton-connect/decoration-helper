@@ -29,11 +29,7 @@ function tomato() {
     console.log("tomato");
 }
 
-export default inject('app', 'auth')(
-    withRouter(
-        observer(tomato)
-    )
-);
+export default tomato;
 ```
 
 you write this:
